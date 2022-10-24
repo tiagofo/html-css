@@ -24,11 +24,38 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+        
+    <form action="bd.sql" method="get">
+        <p>
+            <label for="iup">Aumentar o número:</label>
+            <input type="button" value="Aumentar" id="iup" onclick="calcUp()">
+            <!-- <input type="number" name="up" id="iup" min="0" oninput="calcUp()"> -->
+        </p>
+
+        <p>
+            <label for="icap">Você está no capitulo:</label>
+            <output name="capitulo" id="icap">0</output>
+        </p>
+        <p>
+            <label for="idown">Aumentar o número:</label>
+            <input type="button" value="Reduzir" id="idown" onclick="calcDown()">
+        </p>
+    </form>
 
     <script>
         function calcIdade() {
             let atual = new Date().getFullYear()
-            iidade.innerHTML = Number(atual) - Number(iano.value)
+            idade = Number(atual) - Number(iano.value)
+            
+            iidade.innerHTML = Number(idade)
+        }
+
+        function calcUp() {
+            icap.innerHTML = Number(icap.value) + Number(1)
+        }
+
+        function calcDown() {
+            icap.innerHTML = Number(icap.value) - Number(1)
         }
     </script>
 

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    border: 1px solid white;
+    color: white;
+}
+
+body{
+    background-color: black;
+    display: flex;
+}
+
+.button{
+    width: 40px;
+}

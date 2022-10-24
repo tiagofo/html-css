@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="bd.sql">
+            <input type="button" value="Reduzir" id="idown" onclick="calcDown()">
+            <output name="capitulo1" id="icap1">40</output>
+            <input type="button" value="Aumentar" id="iup" onclick="calcUp()">
+        </form>
+
+
+
+    </main>
+
+    <script>
+        function calcUp() {
+            capitulo1 = Number(icap1.value) + Number(1)
+            icap1.innerHTML = Number(capitulo1)
+        }
+
+        function calcDown() {
+            capitulo1 = Number(icap1.value) - Number(1)
+            icap1.innerHTML = Number(capitulo1)
+        }
+    </script>
+</body>
+</html>
